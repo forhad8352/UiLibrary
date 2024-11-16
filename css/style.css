@@ -1,12 +1,54 @@
 :root{
-                --active:#2884EF;
+                --primary-active:#2884EF;
                 --primary: #3E97FF;
                 --text: #FFFFFF;
-                --radius: 4px;
-                --width: 130px;
 }
-
-/* Button1 */
+*{
+  font-family: Poppins;
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  flex-direction: column;
+}
+.Section{
+  display: flex;
+  padding: 20px;
+  width: 25%;
+  background-color: #f2f2f2;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
+  flex-direction: column;
+  gap: 20px;
+}
+.btn{
+  background-color: var(--primary);
+  color: var(--text);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 400;
+  ;
+}
+.small{
+  font-size: 14px;
+  padding: 8px 16px;
+}
+.medium{
+  font-size: 14px;
+  padding: 10px 18px;
+}
+.large{
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.extralarge{
+  font-size: 16px;
+  padding: 10px 18px;
+}
+/* Button1
 button {               
  display: inline-block;
  border-radius: var(--radius);
@@ -45,7 +87,7 @@ button:hover span {
 button:hover span:after {
  opacity: 1;
  right: 0;
-}
+} */
 /* Button2 */
 .button2 {
   display: inline-block;
