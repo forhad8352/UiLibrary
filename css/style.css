@@ -2,6 +2,9 @@
                 --primary-active:#2884EF;
                 --primary: #3E97FF;
                 --text: #FFFFFF;
+                --gray-200:#F1F1F2;
+                --gray-300:#E1E3EA;
+                --gray-900:#181C32;
 }
 *{
   font-family: Poppins;
@@ -11,26 +14,25 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 20px;
-  flex-direction: column;
+  gap: 30px;
 }
 .Section{
-  display: flex;
   padding: 20px;
   width: 25%;
-  background-color: #f2f2f2;
+  background-color: #ffffff;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.2);
-  flex-direction: column;
   gap: 20px;
+  border-radius: 8px;
 }
+
 .btn{
-  background-color: var(--primary);
-  color: var(--text);
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   font-weight: 400;
-  ;
+  border-radius: 4px;
+  /* width: 120px; */
 }
 .small{
   font-size: 14px;
@@ -48,212 +50,19 @@
   font-size: 16px;
   padding: 10px 18px;
 }
-/* Button1
-button {               
- display: inline-block;
- border-radius: var(--radius);
- background-color: var(--active);
- border: none;
- color: #FFFFFF;
- text-align: center;
- font-size: 17px;
- padding: 16px;
- width: var(--width);
- transition: all 0.5s;
- cursor: pointer;
- margin: 5px;
-}
 
-button span {
- cursor: pointer;
- display: inline-block;
- position: relative;
- transition: 0.5s;
-}
-
-button span:after {
- content: '»';
- position: absolute;
- opacity: 0;
- top: 0;
- right: -15px;
- transition: 0.5s;
-}
-
-button:hover span {
- padding-right: 15px;
-}
-
-button:hover span:after {
- opacity: 1;
- right: 0;
-} */
-/* Button2 */
-.button2 {
-  display: inline-block;
-  transition: all 0.2s ease-in;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  color: #090909;
-  padding: 16px;
-  cursor: pointer;
-  font-size: 17px;
-  border-radius: var(--radius);
-  background: #e8e8e8;
-  border: 1px solid #e8e8e8;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
-  width: var(--width);
-}
-
-.button2:active {
-  color: #666;
-  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
-}
-
-.button2:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.25);
-  top: 100%;
-  width: 140%;
-  height: 180%;
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 50%;
-  display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-  z-index: -1;
-}
-
-.button2:after {
-  content: "";
-  position: absolute;
-  left: 55%;
-  transform: translateX(-50%) scaleY(1) scaleX(1.45);
-  top: 180%;
-  width: 160%;
-  height: 190%;
-  background-color: var(--active);
-  border-radius: 50%;
-  display: block;
-  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
-  z-index: -1;
-}
-
-.button2:hover {
+.primary{
+  background-color: var(--primary);
   color: var(--text);
-  border: 1px solid #2884EF;
-}
-
-.button2:hover:before {
-  top: -35%;
-  background-color: var(--active);
-  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-
-.button2:hover:after {
-  top: -45%;
-  background-color: var(--active);
-  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
-}
-
-/* Button3 */
-.btn-donate {
-  --clr-font-main: hsla(0 0% 20% / 100);
-  --btn-bg-1: hsla(194 100% 69% / 1);
-  --btn-bg-2: hsla(217 100% 56% / 1);
-  --btn-bg-color: hsla(360 100% 100% / 1);
-  cursor: pointer;
-  padding: 16px;
-  width: var(--width);
-  font-size: var(--size, 1rem);
-  font-weight: 500;
-  transition: 0.8s;
-  background-size: 280% auto;
-  background-image: linear-gradient(
-    325deg,
-    var(--active) 0%,
-    var(--btn-bg-1) 55%,
-    var(--active) 90%
-  );
   border: none;
-  border-radius: var(--radius);
-  color: var(--btn-bg-color);
-  box-shadow:
-    0px 0px 20px rgba(71, 184, 255, 0.5),
-    0px 5px 5px -1px rgba(58, 125, 233, 0.25),
-    inset 4px 4px 8px rgba(175, 230, 255, 0.5),
-    inset -4px -4px 8px rgba(19, 95, 216, 0.35);
 }
-
-.btn-donate:hover {
-  background-position: right top;
+.secondary{
+  background-color: var(--gray-200);
+  color: --gray-900;
+  border: none;
 }
-
-.btn-donate:is(:focus, :focus-visible, :active) {
-  outline: none;
-  box-shadow:
-    0 0 0 3px var(--btn-bg-color),
-    0 0 0 6px var(--btn-bg-2);
+.link{
+  background-color: transparent;
+  color: var(--gray-900);
+  border: none;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .btn-donate {
-    transition: linear;
-  }
-}
-
-/* Button4 */
-.btn4{
- width: var(--width);
- margin: 0.5em;
- background: #090909;
- color: white;
- border: none;
- border-radius: var(--radius);
- font-size: 17px;
- cursor: pointer;
- position: relative;
- z-index: 1;
- overflow: hidden;
-}
-
-.btn4:hover {
- color: var(--text);
-}
-
-.btn4:after {
- content: "";
- background: var(--active);
- position: absolute;
- z-index: -1;
- left: -20%;
- right: -20%;
- top: 0;
- bottom: 0;
- transform: skewX(-45deg) scale(0, 1);
- transition: all 0.5s;
-}
-
-.btn4:hover:after {
- transform: skewX(-45deg) scale(1, 1);
- -webkit-transition: all 0.5s;
- transition: all 0.5s;
-}
-/* Button5 */
-/* Button6 */
-/* Button7 */
-/* Button8 */
-/* Button9 */
-/* Button10 */
-/* Button11 */
-/* Button12 */
-/* Button2 */
-/* Button2 */
-/* Button2 */
-/* Button2 */
-/* Button2 */
-/* Button2 */
-/* Button2 */
-/* Button2 */
