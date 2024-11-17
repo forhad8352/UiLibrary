@@ -9,6 +9,14 @@
 *{
   font-family: Poppins;
 }
+body{
+  background-color: #F1F1F2;
+}
+.title{
+  margin: 20px;
+  align-items: center;
+  text-align: center;
+}
 .container{
   display: flex;
   flex-wrap: wrap;
@@ -62,6 +70,21 @@
   border: none;
 }
 .link{
+  background-color: transparent;
+  color: var(--gray-900);
+  border: none;
+}
+.primary:hover{
+  background-color: var(--primary-active);
+  color: var(--text);
+  border: none;
+}
+.secondary:hover{
+  background-color: var(--gray-300);
+  color: --gray-900;
+  border: none;
+}
+.link:hover{
   background-color: transparent;
   color: var(--gray-900);
   border: none;
